@@ -11,7 +11,7 @@ The purpose of this project was to begin learning how to use R and R-Studio to g
 * Formulate null and alternative hypothesis tests for a given data problem.
 * Implement and evaluate simple linear regression and multiple linear regression models for a given dataset.
 * Implement and evaluate the one-sample t-Tests, two-sample t-Tests, and analysis of variance (ANOVA) models for a given dataset.
-* mplement and evaluate a chi-squared test for a given dataset.
+* Implement and evaluate a chi-squared test for a given dataset.
 * Identify key characteristics of A/B and A/A testing.
 * Determine the most appropriate statistical test for a given hypothesis and dataset.
 
@@ -20,7 +20,7 @@ In order to do this, I focussed my efforts on various datasets from the auto ind
 ## Analysis and Results:
 ### Linear Regression to Predict MPG (Deliverable 1):
 
-<br><br>![This is an image]()<br>
+<br><br>![This is an image](https://github.com/bartblack13/MechaCar_Statistical_Analysis/blob/main/Resources/Deliverable_1.png)<br>
 **Figure 1: multiple linear regression summary on MechaCar_mpg.csv.** 
 
 **1) Which variables/coefficients provided a non-random amount of variance to the mpg values in the dataset?**
@@ -41,10 +41,10 @@ I also re-ran the analysis using only vehicle_length, vehicle_weight, and ground
 
 ### Summary Statistics on Suspension Coils (Deliverable 2):
 
-<br><br>![This is an image]()<br>
+<br><br>![This is an image](https://github.com/bartblack13/MechaCar_Statistical_Analysis/blob/main/Resources/Deliverable_2_1.png)<br>
 **Figure 2: total_summary dataframe on Suspension_Coil.csv, with calculated mean, median, variance, and std_dev values.**
 
-<br><br>![This is an image]()<br>
+<br><br>![This is an image](https://github.com/bartblack13/MechaCar_Statistical_Analysis/blob/main/Resources/Deliverable_2_2.png)<br>
 **Figure 3: lot_summary dataframe on Suspension_Coil.csv, with calculated mean, median, variance, and std_dev values, and counts of sample per lot (added to show weight of each lot in statistical analysis).**
 <br><br>
 
@@ -59,28 +59,28 @@ One-sample t-tests were performed on the entire Suspension_Coil sample set to de
 **All lots**
 The t-test for all lots (See Figure 4) produced a p-value of 0.06028.  Given a 95% significance level, and since 0.06028 > 0.05, we **fail to reject** the null hypothesis that there is no statistical difference between the observed sample mean and its population mean. In other words, the mean PSI across the entire sample set **is statistically similar** to the population mean.
 
-<br><br>![This is an image]()<br>
+<br><br>![This is an image](https://github.com/bartblack13/MechaCar_Statistical_Analysis/blob/main/Resources/Deliverable_3_1.png)<br>
 **Figure 4: One-sample t-test on all Suspension_Coil.csv samples, where the mean PSI is tested against a defined population mean of 1,500psi.**
 <br><br>
 
 **Lot1**
 The t-test for Lot1 (See Figure 5) produced a p-value of 1.0.  Given a 95% significance level, and since 1.0 > 0.05, we **fail to reject** the null hypothesis that there is no statistical difference between the observed sample mean of Lot1 and its population mean. In other words, the mean PSI across the Lot1 sample set **is statistically similar** to the population mean.  This can also be confirmed by looking at the lot_summary dataframe (See Figure 3), where the mean of Lot1 is 1500.00, the same as the defined population mean of 1500.
 
-<br><br>![This is an image]()<br>
+<br><br>![This is an image](https://github.com/bartblack13/MechaCar_Statistical_Analysis/blob/main/Resources/Deliverable_3_2.png)<br>
 **Figure 5: One-sample t-test on only Lot1 Suspension_Coil.csv samples, where the mean PSI of Lot1 is tested against a defined population mean of 1,500psi.**
 <br><br>
 
 **Lot2**
 The t-test for Lot2 (See Figure 6) produced a p-value of 0.6072.  Given a 95% significance level, and since 0.6072 > 0.05, we again **fail to reject** the null hypothesis that there is no statistical difference between the observed sample mean of Lot2 and its population mean. In other words, the mean PSI across the Lot2 sample set **is statistically similar** to the population mean.  This is similarly confirmed in the lot_summary dataframe (See Figure 3), where the mean of Lot2 is 1500.20, only slightly different than the defined population mean of 1500.
 
-<br><br>![This is an image]()<br>
+<br><br>![This is an image](https://github.com/bartblack13/MechaCar_Statistical_Analysis/blob/main/Resources/Deliverable_3_3.png)<br>
 **Figure 6: One-sample t-test on only Lot2 Suspension_Coil.csv samples, where the mean PSI of Lot2 is tested against a defined population mean of 1,500psi.**
 <br><br>
 
 **Lot3**
 The t-test for Lot3 (See Figure 7) produced a p-value of 0.04168.  Given a 95% significance level, and since 0.04168 < 0.05, we **can reject** the null hypothesis that there is no statistical difference between the observed sample mean of Lot3 and its population mean. In other words, the mean PSI across the Lot3 sample set **is not statistically similar** to the population mean.  Once again looking at the lot_summary dataframe (See Figure 3), we see that the mean of Lot3 is 1496.14, which is different than the defined population mean of 1500.  At a glance, this differnce might not seem significant, but the t-test indicates that it is statitically different.
 
-<br><br>![This is an image]()<br>
+<br><br>![This is an image](https://github.com/bartblack13/MechaCar_Statistical_Analysis/blob/main/Resources/Deliverable_3_4.png)<br>
 **Figure 7: One-sample t-test on only Lot3 Suspension_Coil.csv samples, where the mean PSI of Lot3 is tested against a defined population mean of 1,500psi.**
 <br><br>
 
